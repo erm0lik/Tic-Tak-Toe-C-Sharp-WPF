@@ -1,0 +1,79 @@
+﻿<Window x:Class="Tic_Tac_Toe.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Tic_Tac_Toe"
+        mc:Ignorable="d"
+        Title="Tic Tac Toe" Height="450" Width="800"
+        ResizeMode="NoResize"
+        Icon="C:\Users\Vlad\Desktop\Tic Tac Toe\Image\tictaktoe.ico"
+        >
+    <Grid  RenderTransformOrigin="0.51,0.5" Height="434" VerticalAlignment="Bottom"  >
+        <Grid.RowDefinitions>
+            <RowDefinition>
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="480 px"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <Grid x:Name="GridGame" ShowGridLines="True"  Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="B00" Grid.Row="0" Grid.Column="0" Width="120" Height="120" Background="#01000000" MouseEnter="B_MouseEnter" MouseLeave="B_MouseLeave" FontSize="90px" Click="B_Click"  ></Button>
+            <Button x:Name="B01" Grid.Row="0" Grid.Column="1" Width="120" Height="120" Background="#01000000" MouseEnter="B_MouseEnter" MouseLeave="B_MouseLeave" FontSize="90px" Click="B_Click" ></Button>
+            <Button x:Name="B02" Grid.Row="0" Grid.Column="2" Width="120" Height="120" Background="#01000000" MouseEnter="B_MouseEnter" MouseLeave="B_MouseLeave" FontSize="90px" Click="B_Click" ></Button>
+            <Button x:Name="B10" Grid.Row="1" Grid.Column="0" Width="120" Height="120" Background="#01000000" MouseEnter="B_MouseEnter" MouseLeave="B_MouseLeave" FontSize="90px" Click="B_Click" ></Button>
+            <Button x:Name="B11" Grid.Row="1" Grid.Column="1" Width="120" Height="120" Background="#01000000" MouseEnter="B_MouseEnter" MouseLeave="B_MouseLeave" FontSize="90px" Click="B_Click" ></Button>
+            <Button x:Name="B12" Grid.Row="1" Grid.Column="2" Width="120" Height="120" Background="#01000000" MouseEnter="B_MouseEnter" MouseLeave="B_MouseLeave" FontSize="90px" Click="B_Click" ></Button>
+            <Button x:Name="B20" Grid.Row="2" Grid.Column="0" Width="120" Height="120" Background="#01000000" MouseEnter="B_MouseEnter" MouseLeave="B_MouseLeave" FontSize="90px" Click="B_Click" ></Button>
+            <Button x:Name="B21" Grid.Row="2" Grid.Column="1" Width="120" Height="120" Background="#01000000" MouseEnter="B_MouseEnter" MouseLeave="B_MouseLeave" FontSize="90px" Click="B_Click" ></Button>
+            <Button x:Name="B22" Grid.Row="2" Grid.Column="2" Width="120" Height="120" Background="#01000000" MouseEnter="B_MouseEnter" MouseLeave="B_MouseLeave" FontSize="90px" Click="B_Click" ></Button>
+        </Grid>
+        <Grid x:Name="Info" Grid.Row="0" Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="70px"></RowDefinition>
+                <RowDefinition></RowDefinition>
+
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button x:Name="Restart" Grid.Column="0" Height="60px" Width="100px" FontSize="23px" Click="RestartGame" >Restart</Button>
+                <Button x:Name="AddUser" Grid.Column="1" Height="60px" Width="100px" FontSize="23px" Click="AddUserr" >AddUser</Button>
+                <Button x:Name="GetUsers" Grid.Column="2" Height="60px" Width="100px" FontSize="23px" Click="GetUser" >GetUsers</Button>
+            </Grid>
+            <Grid Grid.Row="1" Height="120px" Margin="0,27,0,217">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Row="0" FontSize="25">За хрестики :</TextBlock>
+                <ComboBox  x:Name="playerX" Grid.Row="1" SelectionChanged="PlayerXChange" FontSize="25"></ComboBox>
+                <TextBlock Grid.Row="0" Grid.Column="1" FontSize="25">За нолики :</TextBlock>
+                <ComboBox  x:Name="playerO" Grid.Row="1" Grid.Column="1" SelectionChanged="PlayerOChange" FontSize="25" ></ComboBox>
+
+            </Grid>
+
+
+        </Grid>
+
+    </Grid>
+</Window>
