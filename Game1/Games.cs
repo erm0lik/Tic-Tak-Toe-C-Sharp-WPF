@@ -7,11 +7,11 @@ using System.Windows.Controls;
 
 namespace Tic_Tac_Toe
 {
-    public class Games
+    abstract class Games
     {
         private string value = "X";
         public int count { get; private set; } = 0;
-        public double rating { get; private set; } = new Random().NextDouble();
+        public abstract double rating { get; }
         public string Value
         {
             get { return value; }

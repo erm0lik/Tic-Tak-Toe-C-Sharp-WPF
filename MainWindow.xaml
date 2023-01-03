@@ -69,9 +69,10 @@
                 <ComboBox  x:Name="playerX" Grid.Row="1" SelectionChanged="PlayerXChange" FontSize="25"></ComboBox>
                 <TextBlock Grid.Row="0" Grid.Column="1" FontSize="25">За нолики :</TextBlock>
                 <ComboBox  x:Name="playerO" Grid.Row="1" Grid.Column="1" SelectionChanged="PlayerOChange" FontSize="25" ></ComboBox>
-
+                   
             </Grid>
 
+            <CheckBox x:Name="Radio"  Height="40" Margin="0,215,0,79" Grid.Row="1" Content="Гра на рейтинг ?" FontSize="30" Unchecked="RadioButton_UnChecked" Checked="RadioButton_Checked"></CheckBox>
 
         </Grid>
 

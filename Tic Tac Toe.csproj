@@ -61,6 +61,8 @@
     </ApplicationDefinition>
     <Compile Include="Game1\Account.cs" />
     <Compile Include="Game1\BaseAccount.cs" />
+    <Compile Include="Game1\TrainingGame.cs" />
+    <Compile Include="Game1\DefoltGame.cs" />
     <Compile Include="Game1\ZeroLoseAccount.cs" />
     <Compile Include="Game1\PremiumAccount.cs" />
     <Compile Include="RegistrationWindow.xaml.cs">

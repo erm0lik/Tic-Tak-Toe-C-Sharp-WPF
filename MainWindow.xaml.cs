@@ -24,7 +24,7 @@ namespace Tic_Tac_Toe
     /// </summary>
     public partial class MainWindow : Window
     {
-        Games game = new Games();
+        Games game = new TrainingGame();
         int id = 0;
         RegistrationWindow registrationWindow = new RegistrationWindow();
         Account accountX = null;
@@ -147,7 +147,9 @@ namespace Tic_Tac_Toe
             B21.Content = null;
             B22.IsEnabled = true;
             B22.Content = null;
-            game = new Games();
+            if (Radio.IsChecked == true)
+                game = new DefoltGame();
+            else game = new TrainingGame();
         }
 
         private void PlayerXChange(object sender, SelectionChangedEventArgs e)
@@ -158,6 +160,15 @@ namespace Tic_Tac_Toe
         private void PlayerOChange(object sender, SelectionChangedEventArgs e)
         {
             accountO = Account.accounts.Find(name => name.UserName == playerO.SelectedItem);
+        }
+
+        private void RadioButton_Checked(object sender, RoutedEventArgs e)
+        {
+            FieldClearance();
+        }
+            private void RadioButton_UnChecked(object sender, RoutedEventArgs e)
+        {
+            FieldClearance();
         }
     }
 }
